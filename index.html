@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cápsulas de siembra con mucílago de nopal</title>
+<style>
+:root{--bg:#EEF1E8;--card:#FFFFFF;--ink:#1D2B1F;--mute:#55655A;--g:#2F5D3A;--g2:#DCE8D3;--tuna:#B0245A;--line:#C9D3C2;
+--c1:#C98F6B;--c2:#9DBF8F;--c3:#7A5A3C;--c4:#2B1D10;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141C16;--card:#1E2922;--ink:#E7EEE3;--mute:#A4B3A8;--g:#8CC49A;--g2:#24362A;--tuna:#F07AA8;--line:#34463A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141C16;--card:#1E2922;--ink:#E7EEE3;--mute:#A4B3A8;--g:#8CC49A;--g2:#24362A;--tuna:#F07AA8;--line:#34463A;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2rem,6vw,3.4rem)}h2{font-size:clamp(1.5rem,4vw,2.1rem)}h3{font-size:1.15rem}
+p{margin:0 0 1em;max-width:64ch}
+section{padding:3rem 1.25rem;max-width:62rem;margin:0 auto}
+.hero{display:grid;gap:2rem;align-items:center}
+@media(min-width:760px){.hero{grid-template-columns:1.1fr .9fr}}
+.lead{font-size:1.15rem;color:var(--mute)}
+.tag{display:inline-block;background:var(--g2);color:var(--g);padding:.25rem .7rem;border-radius:99px;font-size:.9rem;font-weight:600;margin-bottom:1rem}
+.cap{display:flex;flex-direction:column;align-items:center;gap:1rem}
+.cap svg{width:min(100%,19rem);height:auto}
+.cap circle{cursor:pointer;stroke:var(--bg);stroke-width:2;transition:transform .2s;transform-origin:150px 150px}
+.cap circle:hover,.cap circle:focus-visible,.cap circle.on{transform:scale(1.04)}
+.cap circle:focus-visible{outline:3px solid var(--tuna);outline-offset:2px}
+.info{min-height:5.5rem;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--tuna);padding:.8rem 1rem;border-radius:6px;width:100%}
+.info b{display:block}
+.grid{display:grid;gap:1rem}
+@media(min-width:700px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.2rem}
+.big{font-family:Georgia,serif;font-size:2.4rem;color:var(--tuna);line-height:1}
+.bar{height:1.6rem;border-radius:4px;background:var(--g);color:#fff;padding:0 .6rem;display:flex;align-items:center;font-size:.9rem;font-weight:600;margin:.3rem 0 .8rem;max-width:100%}
+.bar.low{background:var(--tuna)}
+ol.steps{padding-left:1.3rem}ol.steps li{margin-bottom:.7rem}
+.warn{background:var(--g2);border-radius:6px;padding:.8rem 1rem;margin:1rem 0}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}
+th,td{padding:.55rem .6rem;text-align:left;border-bottom:1px solid var(--line);font-size:.95rem}
+td input{width:5.2rem;font:inherit;padding:.3rem;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink)}
+td input:focus-visible{outline:3px solid var(--tuna)}
+.wrap{overflow-x:auto}
+.pct{font-weight:700;color:var(--tuna);white-space:nowrap}
+.src li{font-size:.9rem;color:var(--mute);margin-bottom:.4rem}
+footer{border-top:1px solid var(--line);padding:2rem 1.25rem;text-align:center;color:var(--mute);font-size:.9rem}
+</style></head><body>
+
+<section class="hero">
+<div>
+<span class="tag">Concurso Interpreparatorias UANL 2026</span>
+<h1>Una cápsula para que la semilla llegue a ser árbol</h1>
+<p class="lead">En las zonas áridas del noreste de México muchas plántulas mueren antes de echar raíz. Proponemos una cápsula con mucílago de nopal que le dé humedad extra a la semilla durante sus primeros días. Esta página explica la idea, enseña a hacerla y te deja probarla en tu escuela.</p>
+<p><b>Importante:</b> es una hipótesis que queremos comprobar, no una solución demostrada.</p>
+</div>
+<div class="cap">
+<svg viewBox="0 0 300 300" role="group" aria-label="Capas de la cápsula">
+<circle id="l4" cx="150" cy="150" r="140" fill="var(--c1)" tabindex="0" role="button" aria-label="Capa 4, arcilla"/>
+<circle id="l3" cx="150" cy="150" r="104" fill="var(--c2)" tabindex="0" role="button" aria-label="Capa 3, mucílago de nopal"/>
+<circle id="l2" cx="150" cy="150" r="68" fill="var(--c3)" tabindex="0" role="button" aria-label="Capa 2, tierra"/>
+<circle id="l1" cx="150" cy="150" r="26" fill="var(--c4)" tabindex="0" role="button" aria-label="Capa 1, semilla"/>
+</svg>
+<div class="info" id="info" aria-live="polite"><b>Toca una capa</b>La cápsula mide de 1 a 2 cm. Cada capa tiene un trabajo distinto.</div>
+</div>
+</section>
+
+<section>
+<h2>El problema: reforestar no basta, la planta tiene que sobrevivir</h2>
+<div class="grid g3">
+<div class="box"><div class="big">&lt;60%</div><p>Supervivencia que suelen tener las reforestaciones en México, sobre todo por sequías (INIFAP).</p></div>
+<div class="box"><div class="big">80%</div><p>Supervivencia mínima que pide CONAFOR como referencia.</p></div>
+<div class="box"><div class="big">28.7%</div><p>Supervivencia en 2021 de una reforestación con plantas nativas en Los Ramones, Nuevo León.</p></div>
+</div>
+<h3 style="margin-top:1.5rem">El mismo sitio, dos años distintos</h3>
+<div class="bar" style="width:95.3%">2020: 95.3%</div>
+<div class="bar low" style="width:28.7%;min-width:7rem">2021: 28.7%</div>
+<p>Cuando la planta se seca, se pierde el dinero, el tiempo y la oportunidad de recuperar el ecosistema.</p>
+</section>
+
+<section>
+<h2>Qué dice la ciencia, y qué todavía no sabemos</h2>
+<div class="grid g2">
+<div class="box"><h3>Lo que sí hay</h3>
+<p>Las cápsulas de semilla (<i>seed balls</i>) ayudan a que la semilla salga en zonas secas, pero no siempre a que la planta se establezca a largo plazo.</p>
+<p>En un área degradada de Brasil, las bolas con 60% de arcilla tuvieron la mayor emergencia y crecimiento.</p></div>
+<div class="box"><h3>Lo que falta</h3>
+<p>El mucílago de chía y de psyllium funciona como hidrogel, pero los resultados cambian según la especie, el grosor de la capa y la humedad. A veces la germinación baja.</p>
+<p><b>No encontramos estudios con mucílago de nopal en especies nativas del noreste.</b> Ahí está nuestro aporte.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Cómo hacer las cápsulas</h2>
+<p>Pensado para un taller escolar, con un adulto presente.</p>
+<ol class="steps">
+<li><b>Mucílago:</b> pica nopal tierno y déjalo en agua. Cuélalo y anota cuántos gramos de nopal usaste por litro. Ejemplo para comparar: 100 g/L y 200 g/L.</li>
+<li><b>Armado:</b> envuelve la semilla en tierra, luego en mucílago y por último en arcilla.</li>
+<li><b>Forma:</b> haz bolitas de 1 a 2 cm.</li>
+<li><b>Secado:</b> déjalas secar al aire y a la sombra para que no se enmohezcan.</li>
+<li><b>Guardado:</b> guárdalas en un lugar seco.</li>
+</ol>
+<div class="warn"><b>Cuidado:</b> usa guantes para limpiar el nopal y quita las espinas. Consigue las semillas en un vivero, nunca en áreas protegidas, y confirma con un vivero o con CONABIO que las especies son nativas de tu zona.</div>
+</section>
+
+<section>
+<h2>Nuestro primer ensayo</h2>
+<p>Del 21 de octubre al 9 de noviembre de 2026 (19 días) probamos la cápsula en dos macetas con tres semillas de huizache cada una, con el mismo suelo, riego y luz.</p>
+<div class="wrap"><table>
+<thead><tr><th>Maceta</th><th>Qué se sembró</th><th>Resultado</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>3 semillas sin cápsula</td><td>Ninguna ha crecido</td></tr>
+<tr><td>2</td><td>3 cápsulas con mucílago de nopal y arcilla</td><td>Las 3 germinaron y enraizaron; primera hoja verde el 7 de noviembre</td></tr>
+</tbody></table></div>
+<p style="margin-top:1rem">Es un primer ensayo con pocas semillas. El siguiente paso es repetirlo con más semillas y comparar también cápsulas sin mucílago.</p>
+</section>
+
+<section>
+<h2>Pruébalo en tu escuela</h2>
+<p>Para saber si el mucílago sirve hay que comparar. Haz cuatro grupos con mínimo 10 cápsulas o semillas cada uno, en el mismo suelo, con el mismo riego limitado y la misma luz. Repite al menos dos veces.</p>
+<div class="wrap"><table>
+<thead><tr><th>Grupo</th><th>Sembradas</th><th>Germinaron</th><th>Germinación</th></tr></thead>
+<tbody id="rows"></tbody></table></div>
+<p style="margin-top:1rem">Los grupos A y C muestran los datos de nuestro primer ensayo (3 semillas por grupo); B y D están pendientes para la siguiente etapa. También anota los días que tardó en germinar, cuántas plantas siguen vivas y su altura. Si no hay diferencia entre los grupos, compártelo también: es un resultado válido.</p>
+</section>
+
+<section>
+<h2>Con qué ODS se relaciona</h2>
+<div class="grid g3">
+<div class="box"><h3>ODS 15</h3><p>Vida de ecosistemas terrestres: restaurar zonas degradadas con especies nativas.</p></div>
+<div class="box"><h3>ODS 13</h3><p>Acción por el clima: las sequías se intensifican y complican reforestar.</p></div>
+<div class="box"><h3>ODS 6</h3><p>Agua limpia y saneamiento: aprovechar mejor el agua disponible.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Fuentes</h2>
+<ul class="src">
+<li>Dingley, C., et al. (2024). Psyllium husk mucilage as a novel seed encapsulant for agriculture and reforestation. <i>Journal of Sustainable Agriculture and Environment</i>, 3(3).</li>
+<li>Swartz et al. (2026). Seed pellets containing activated carbon increase emergence of native plant species. <i>Restoration Ecology</i>.</li>
+<li>Leão, B. M., et al. Use of seed balls as a technique to improve seedling emergence and establishment in an area degraded by urban solid waste.</li>
+<li>Monitoreo de la supervivencia de una reforestación con especies nativas del matorral espinoso tamaulipeco (2022). <i>Revista Mexicana de Ciencias Forestales</i>, 13(71).</li>
+</ul>
+</section>
+
+<footer>Equipo RootRise: Alejandra Palacio Cardona, Leidy Grisel Ramos Romo y Zoe Valeria Treviño González · Preparatoria CIDEB Apodaca · Docente asesor: Angel Eduardo Canales Garza<br>Proyecto para el concurso “Investigación y acción para la sustentabilidad” 2026.</footer>
+
+<script>
+var L={l1:["Semilla nativa","Es lo que queremos que germine y se convierta en planta. Debe ser una especie de la región, de vivero."],
+l2:["Tierra","Rodea a la semilla y es su primer alimento."],
+l3:["Mucílago de nopal","Gel natural que suelta el nopal al remojarse. La hipótesis es que retiene agua y la da poco a poco."],
+l4:["Arcilla natural","Protege la cápsula y le da forma de bolita."]};
+var info=document.getElementById("info");
+document.querySelectorAll(".cap circle").forEach(function(c){
+function show(){document.querySelectorAll(".cap circle").forEach(function(x){x.classList.remove("on")});c.classList.add("on");
+var d=L[c.id];info.innerHTML="<b></b>";info.firstChild.textContent=d[0];info.appendChild(document.createTextNode(d[1]));}
+c.addEventListener("click",show);c.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();show();}});});
+var G=["A. Semilla sola","B. Cápsula sin mucílago","C. Cápsula con mucílago","D. Cápsula con mucílago a otra concentración"];
+var tb=document.getElementById("rows");
+G.forEach(function(n,i){var r=document.createElement("tr");
+r.innerHTML="<td></td><td><input type='number' min='0' aria-label='Sembradas'></td><td><input type='number' min='0' aria-label='Germinaron'></td><td class='pct'>—</td>";
+r.firstChild.textContent=n;var inp=r.querySelectorAll("input"),out=r.querySelector(".pct");
+function calc(){var s=+inp[0].value,g=+inp[1].value;out.textContent=(s>0&&g>=0&&g<=s)?(Math.round(g/s*1000)/10)+"%":(g>s?"Revisa los datos":"—");}
+if(i===0){inp[0].value=3;inp[1].value=0;}if(i===2){inp[0].value=3;inp[1].value=3;}calc();inp[0].addEventListener("input",calc);inp[1].addEventListener("input",calc);tb.appendChild(r);});
+</script>
+</body></html>
